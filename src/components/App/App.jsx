@@ -5,14 +5,13 @@ import PersonsContainer from "../PersonsContainer";
 
 function App() {
 
-  const [people, setPeople] = useState(data)
+  const [people, setPeople] = useState(data);
   
-
-  const add_new_person = (name, sex,avatar) => setPeople([...people,
+  const add_new_person = (name, gender,avatar) => setPeople([...people,
     {
       id: Date.now(),
       name,
-      sex,
+      gender,
       avatar
     }
   ]);
