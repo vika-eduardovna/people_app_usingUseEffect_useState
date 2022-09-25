@@ -4,6 +4,7 @@ import Person from '../Person'
 import Close from '../UI/Close'
 
 
+
 export default function GenderContainer({ id, people, gender, delete_person, delete_gender_block }) {
     return (
         <div className={['wrapper', s.wrapper].join(' ')}>
