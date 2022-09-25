@@ -20,8 +20,8 @@ export default function AddPerson({add_new_person}) {
         <input type="text" name='name' placeholder='Name'/>
         <input type="text" name='avatar' placeholder='Link for your photo'/>
         <select name="gender">
-          <option value="male">Male</option>
-          <option value="female">Female</option>
+          <option value="man">Male</option>
+          <option value="woman">Female</option>
         </select>
         <button className={s.button}>Add</button>
     </form>

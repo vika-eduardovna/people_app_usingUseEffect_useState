@@ -7,12 +7,12 @@ function App() {
 
   const [people, setPeople] = useState(data);
   
-  const add_new_person = (name, gender,avatar) => setPeople([...people,
+  const add_new_person = (name, avatar, gender) => setPeople([...people,
     {
       id: Date.now(),
       name,
-      gender,
-      avatar
+      avatar,
+      gender
     }
   ]);
 

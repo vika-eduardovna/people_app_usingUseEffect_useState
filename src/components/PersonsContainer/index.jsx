@@ -1,10 +1,10 @@
 import React from 'react'
-import s from './style.module.sass'
 import GenderContainer from '../GenderContainer';
 
 export default function PersonsContainer({ people }) {
 
   const gender_result = [];
+
   people.forEach(element => {
     const gender = gender_result.find(el => el.gender === element.gender);
     if (gender !== undefined) {
@@ -18,7 +18,7 @@ export default function PersonsContainer({ people }) {
   });
 
   return (
-    <div className={['wrapper', s.container].join(' ')}>
+    <div >
       {
         gender_result.map(elem => <GenderContainer key={elem.gender} {...elem} />)
       }
