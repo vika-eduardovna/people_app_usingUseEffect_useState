@@ -16,10 +16,13 @@ function App() {
     }
   ]);
 
+  const delete_person = id => setPeople(people.filter(el => el.id !== id));
+  const delete_gender_block = gender => setPeople(people.filter(el => el.gender !== gender));
+
   return (
     <div>
       <AddPerson add_new_person={add_new_person}/>
-      <PersonsContainer people={people}/>
+      <PersonsContainer people={people} delete_person={delete_person} delete_gender_block={delete_gender_block}/>
     </div>
   );
 }

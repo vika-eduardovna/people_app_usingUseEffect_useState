@@ -1,7 +1,7 @@
 import React from 'react'
 import GenderContainer from '../GenderContainer';
 
-export default function PersonsContainer({ people }) {
+export default function PersonsContainer({ people, delete_person, delete_gender_block }) {
 
   const gender_result = [];
 
@@ -20,7 +20,12 @@ export default function PersonsContainer({ people }) {
   return (
     <div >
       {
-        gender_result.map(elem => <GenderContainer key={elem.gender} {...elem} />)
+        gender_result.map(elem =>
+           <GenderContainer 
+              key={elem.gender} {...elem} 
+              delete_person={delete_person}
+              delete_gender_block={delete_gender_block}
+            />)
       }
     </div>
   )

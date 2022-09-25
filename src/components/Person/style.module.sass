@@ -1,4 +1,5 @@
 .person_card
+    position: relative
     margin-top: 25px
     padding-top: 25px
     width: 302px
@@ -8,8 +9,22 @@
     flex-direction: column
     justify-content: space-around
     align-items: center
+    &:hover .close
+        display: block
 
     img
         width: 114px
         height: 146px
         object-fit: cover
+
+.name
+    font-weight: 400
+    font-size: 30px
+    line-height: 36px
+
+.close
+    position: absolute
+    display: none
+    right: 0
+    top: 0
+    transform: translate(50%, -50%)
